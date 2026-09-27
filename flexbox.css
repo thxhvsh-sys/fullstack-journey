@@ -1,0 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  background-color: #f4f4f9;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+}
+
+h2 {
+  color: #3498db;
+  margin-top: 40px;
+}
+
+/* Общий стиль контейнера */
+.container {
+  display: flex;         /* Включаем Flexbox */
+  background-color: #ddd;
+  padding: 10px;
+  margin-bottom: 20px;
+  gap: 10px;             /* Расстояние между элементами */
+  border-radius: 8px;
+}
+
+/* Коробки */
+.box {
+  background-color: #3498db;
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+  padding: 20px;
+  border-radius: 6px;
+  width: 60px;
+  text-align: center;
+}
+
+/* Пример 1: по умолчанию (слева) */
+.row {
+  justify-content: gap;
+}
+
+/* Пример 2: по центру */
+.center {
+  justify-content: center;
+  align-items: column;
+  height: 120px; /* чтобы увидеть вертикальное центрирование */
+}
+
+/* Пример 3: между элементами */
+.between {
+  justify-content: space-between;
+}

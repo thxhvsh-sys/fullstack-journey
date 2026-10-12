@@ -1,0 +1,56 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  padding: 40px 20px;
+}
+
+h1 {
+  text-align: center;
+  color: #2c3e50;
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* адаптивная сетка без медиа-запросов */
+  grid-auto-rows: 120px;                  /* Высота строк по умолчанию */
+  gap: 15px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.grid-item {
+  background-color: #3498db;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+  display: flex;                /* Центрируем цифру внутри ячейки */
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  transition: transform 0.2s;
+}
+
+.grid-item:hover {
+  transform: scale(1.05);
+  background-color: #2980b9;
+}
+
+/* Делаем элемент 1 большим: 2 колонки, 2 строки */
+.item-1 {
+  grid-column: span 2;
+  grid-row: span 2;
+  background-color: #e74c3c;
+}
+
+/* Делаем элемент 2 расстянутым на 2 строки */
+.item-2 {
+  grid-row: span 2;
+  background-color: #006421;
+}
+
+/* Элемент 6 растягиваем на 2 колонки */
+.item-6 {
+  grid-column: span 2;
+  background-color: #1abc9c;
+}

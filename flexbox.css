@@ -38,7 +38,7 @@ h2 {
 
 /* Пример 1: по умолчанию (слева) */
 .row {
-  justify-content: gap;
+  justify-content: space-around;
 }
 
 /* Пример 2: по центру */

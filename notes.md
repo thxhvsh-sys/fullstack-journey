@@ -511,3 +511,67 @@ function test() {
 }
 
 test();
+🎓 УРОК 13: Объекты и Массивы
+1. Что это и зачем?
+До сих пор ты хранил данные по отдельности:
+const userName = "Hvsh";
+const userAge = 23;
+const userCity = "Moscow";
+Но что если нужно хранить связанные данные вместе? Например, информацию о пользователе, товаре, посте в блоге?
+Для этого есть объекты и массивы.
+2. Объекты (Objects)
+Объект — это набор пар "ключ: значение". Как словарь или анкета.
+Создание объекта:
+const user = {
+  name: "Hvsh",
+  age: 23,
+  city: "Moscow",
+  isLearning: true
+};
+Доступ к данным:
+// Через точку (самый частый способ):
+console.log(user.name);  // "Hvsh"
+console.log(user.age);   // 23
+
+// Через квадратные скобки (если ключ в переменной):
+const key = "city";
+console.log(user[key]);  // "Moscow"
+Изменение данных:
+user.age = 24;           // Изменил возраст
+user.email = "hvsh@mail.ru";  // Добавил новое поле
+Методы (функции внутри объекта):
+const user = {
+  name: "Hvsh",
+  age: 23,
+  greet: function() {
+    console.log(`Привет, меня зовут ${this.name}`);
+  }
+};
+
+user.greet();  // "Привет, меня зовут Hvsh"
+this — ссылается на текущий объект.
+3. Массивы (Arrays)
+Массив — это список элементов. Как список покупок.
+Создание массива:
+const fruits = ["apple", "banana", "orange"];
+const numbers = [1, 2, 3, 4, 5];
+const mixed = [1, "text", true, null];  // можно разные типы
+Доступ к элементам:
+console.log(fruits[0]);  // "apple" (нумерация с 0!)
+console.log(fruits[1]);  // "banana"
+console.log(fruits[2]);  // "orange"
+Изменение и добавление:
+fruits[0] = "grape";     // Заменил первый элемент
+fruits.push("kiwi");     // Добавил в конец
+Основные свойства:
+console.log(fruits.length);  // Количество элементов (длина массива)
+4. Массивы объектов (комбинация)
+Частый паттерн в реальном коде:
+const users = [
+  { name: "Hvsh", age: 23 },
+  { name: "Anna", age: 25 },
+  { name: "Max", age: 20 }
+];
+
+console.log(users[0].name);  // "Hvsh"
+console.log(users[1].age);   // 25

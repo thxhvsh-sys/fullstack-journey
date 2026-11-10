@@ -575,3 +575,22 @@ const users = [
 
 console.log(users[0].name);  // "Hvsh"
 console.log(users[1].age);   // 25
+Теория: Урок 14 – Циклы в JavaScript
+Циклы позволяют выполнять один и тот же блок кода несколько раз. В JS есть несколько основных видов:
+1. Классический for
+Используется, когда нужно точное количество повторений или доступ к индексу элемента.
+for (let i = 0; i < 3; i++) {
+  console.log(`Итерация номер ${i}`); // 0, 1, 2
+}
+2. for...of
+Идеален для перебора массивов (или других итерируемых объектов). Он сразу выдаёт значения, а не индексы.
+const colors = ["red", "green", "blue"];
+for (const color of colors) {
+  console.log(color); // "red", затем "green", затем "blue"
+}
+3. for...in
+Используется для перебора ключей объекта.
+const person = { name: "Hvsh", age: 23 };
+for (const key in person) {
+  console.log(key, person[key]); // "name Hvsh", затем "age 23"
+}
